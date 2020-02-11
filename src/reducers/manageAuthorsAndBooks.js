@@ -13,7 +13,7 @@ function booksReducer(state = [], action) {
   let idx;
   switch (action.type) {
     case "ADD_BOOK":
-      return [...state.books, action.book];
+      return [...state, action.book];
 
     case "REMOVE_BOOK":
       idx = state.findIndex(book => book.id === action.id);
